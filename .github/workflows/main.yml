@@ -22,3 +22,12 @@ jobs:
 
       - name: Run tests
         run: pytest
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Run flake8
+        run: flake8 .
